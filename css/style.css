@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 2000px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.page {
+    min-width: 320px;
+}
+
+.container {
+    min-width: 320px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.intro {
+    position: relative;
+    width: 100%;
+}
+
+.intro__scalable {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    transition: max-width ease-out 0.3s;
+    z-index: 1;
+}
+
+.intro__scalable img {
+    display: block;
+}
+
+.intro__scalable_fix {
+    max-width: 980px;
+    width: auto;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.intro__map {
+    position: absolute;
+    top: 0;
+    width: 30%;
+    z-index: 2;
+}
+
+.intro__logo {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    z-index: 3;
+}
+.intro__logo img {
+    width: 100%;
+}
