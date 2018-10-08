@@ -1,5 +1,7 @@
-var scalable = document.querySelector('.intro__scalable');
+var scalableItems = document.querySelectorAll('.js-scalable');
 
 window.addEventListener('scroll', function(evt) {
-    scalable.classList.add('intro__scalable_fix');
+    scalableItems.forEach(function(item) {
+        item.classList.add('js-scalable_fix');
+    })
 });
