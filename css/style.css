@@ -27,9 +27,23 @@
 }
 
 :root {
-    --full-width: 1160px;
-    --intro-top: 130px;
-    --padding: 90px;
+    --full-width: 1024px;
+    --padding: 72px;
+
+    --font-size-xl: 134px;
+    --line-height-xl: 1;
+
+    --font-size-l: 60px;
+    --line-height-l: 1;
+
+    --font-size-m: 24px;
+    --line-height-m: 32px;
+
+    --font-size-s: 22px;
+    --line-height-s: 28px;
+
+    --font-size-xs: 16px;
+    --line-height-xs: 17px;
 }
 
 * {
@@ -40,12 +54,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: Bureausans, Arial, sans-serif;
-    font-size: 22px;
+    font-size: var(--font-size-s);
+    line-height: var(--line-height-s);
     font-weight: 200;
-    line-height: calc(14/11);
 }
 
 img {
+    display: block;
     max-width: 100%;
     height: auto;
 }
@@ -64,6 +79,12 @@ img {
     overflow: hidden;
 }
 
+.title {
+    font-family: EBGaramond, Arial, sans-serif;
+    font-size: var(--font-size-l);
+    line-height: var(--line-height-l);
+}
+
 .page {
     min-width: 320px;
 }
@@ -74,77 +95,15 @@ img {
     box-shadow: 0px 3px 62px 0px rgba(0, 0, 0, 0.32);
 }
 
-
 .intro {
     position: relative;
     width: 100%;
-    padding-top: var(--intro-top);
-    margin-bottom: 80px;
-}
-
-
-.intro__img.js-scalable {
-    position: relative;
-    top: calc(var(--intro-top) * -1);
-    left: calc((100vw - var(--full-width)) / -2);
-    max-width: calc(100vw - 8px);
-    max-height: 100vh;
-    width: 100vw;
-    height: 100vh;
-    transition:
-            top ease-out 0.3s,
-            left ease-out 0.3s,
-            max-height ease-out 0.3s,
-            max-width ease-out 0.3s;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.intro__img.js-scalable_fix {
-    top: 0;
-    left: 0;
-    max-width: var(--full-width);
-    min-width: 100%;
-    max-height: 630px;
-    padding: 0 var(--padding);
-}
-
-.intro__logo.js-scalable {
-    position: absolute;
-    top: 20%;
-    left: calc((100vw - var(--full-width)) / -2);
-    max-width: calc(100vw - 8px);
-    width: 100vw;
-    transition:
-            top ease-out 0.3s,
-            left ease-out 0.3s,
-            max-width ease-out 0.3s;
-    z-index: 3;
-}
-
-.intro__logo.js-scalable_fix {
-    top: calc(10% + var(--intro-top));
-    left: 0;
-    max-width: var(--full-width);
-    min-width: 100%;
-}
-
-.intro__logo img {
-    width: 100%;
-}
-
-.intro__map {
-    position: absolute;
-    top: 10px;
-    width: 300px;
-    z-index: 2;
+    padding: 55px var(--padding) 40px var(--padding);
 }
 
 .intro__title {
-    padding: 0 var(--padding);
-    margin-top: 50px;
-    font-family: EBGaramond, Arial, sans-serif;
-    font-size: 72px;
+    margin-top: 45px;
+    text-align: center;
 }
 
 .location {
@@ -153,22 +112,19 @@ img {
 }
 
 .location__intro {
-    margin-bottom: 110px;
+    position: relative;
+    margin-bottom: 140px;
 }
 
 .location__title {
     position: relative;
-    margin-bottom: -78px;
+    margin-bottom: -60px;
     text-align: center;
     font-family: Bureausans, Arial, sans-serif;
-    font-size: 184px;
-    line-height: 1;
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-xl);
     font-weight: 300;
     z-index: 1;
-}
-
-.location_riga .location__title {
-    text-align: left;
 }
 
 .location__name {
@@ -178,23 +134,24 @@ img {
 .location__name::before {
     content: "";
     position: relative;
-    right: -13px;
+    right: 12px;
     display: inline-block;
-    width: 70px;
-    height: 70px;
-    background: url("../img/tallinn/flag_tallinn.png");
+    width: 63px;
+    height: 63px;
+    background: url("../img/tallinn/tallinn_flag.png");
 }
 
-.location_riga .location__name::before {
-    background-image: url("../img/riga/flag_riga.png");
+/*figures default*/
+
+.figure {
+    position: relative;
 }
 
-.location_vilnius .location__name::before {
-    background-image: url("../img/vilnius/flag_vilnius.png");
-}
-
-.location_riga .full-figure__img {
-    margin-top: -175px;
+.figure__caption {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-xs);
+    font-family: Bureausans, Arial, sans-serif;
+    font-weight: 600;
 }
 
 .full-figure {
@@ -205,21 +162,261 @@ img {
     position: absolute;
     display: flex;
     align-items: center;
-    width: 255px;
-    height: 220px;
-    margin-top: -50px;
-    padding: 50px;
-    background: url("../img/tallinn/shape_tallinn.png") no-repeat;
+    padding: 45px;
+    background-image: url("../img/tallinn/sticker1.png");
+    background-repeat: no-repeat;
     color: white;
     text-align: center;
-    transform: translate(-20%, -53%);
     z-index: 1;
 }
 
-.location_tallinn .full-figure__caption {
-    background-image: url("../img/tallinn/shape_tallinn.png");
+.note-figure {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(16%, 38%);
+    z-index: 1;
+}
+
+/*section defaults*/
+
+.section__title {
+    margin-bottom: 25px;
+}
+
+.section__text {
+
+}
+
+.section__note {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-xs);
+    font-family: Bureausans, Arial, sans-serif;
+    font-weight: 600;
+}
+
+/*location tallinn*/
+.location_tallinn .location__intro .full-figure__caption {
+    left: 0;
+    bottom: 0;
+    width: 235px;
+    height: 204px;
+    transform: translate(-14%, 32%);
+}
+
+/*tallinn-details*/
+.tallinn-details {
+    margin-bottom: 25px;
+}
+
+.tallinn-details .section__title {
+    color: #e98eb3;
+}
+
+.tallinn-details .section__text {
     width: 255px;
-    height: 220px;
+}
+
+.tallinn-details__cols {
+    position: relative;
+    top: -106px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-right: calc(var(--padding) * -1);
+}
+
+.tallinn-details .figure {
+    position: relative;
+}
+
+.figure_knocker {
+    align-self: flex-end;
+    bottom: -17px;
+    margin-right: 81px;
+}
+
+.figure_door {
+    align-self: center;
+}
+
+.figure_lantern {
+    top: -29px;
+    align-self: flex-start;
+    width: 230px;
+    margin-left: auto;
+}
+
+.tallinn-details .figure__caption {
+    position: absolute;
+}
+
+.figure_door .figure__caption {
+    top: 160px;
+    left: -125px;
+    width: 125px;
+}
+
+.figure_lantern .figure__caption {
+    top: 93%;
+    left: 23%;
+    width: 155px;
+}
+
+/*town-hall*/
+.tallinn-town-hall {
+    margin-bottom: 90px;
+}
+
+.tallinn-town-hall .section__text {
+    position: absolute;
+    top: 23px;
+    left: 32px;
+    width: 200px;
+}
+
+.tallinn-town-hall .section__note {
+    position: absolute;
+    top: 138px;
+    left: 32px;
+    width: 185px;
+}
+
+.tallinn-town-hall {
+    color: white;
+}
+
+.tallinn-town-hall .section__title {
+    color: #7e89d9;
+}
+
+.tallinn-town-hall .full-figure__caption {
+    right: 0;
+    bottom: 0;
+    height: 190px;
+    width: 290px;
+    background-image: url("../img/tallinn/sticker2.png");
+    transform: translate(16%, 20%);
+}
+
+/*tallinn vana*/
+.tallinn-vana {
+    margin-bottom: 100px;
+}
+
+.tallinn-vana .section__title {
+    color: #825956;
+}
+
+.figure_bottle {
+    display: flex;
+}
+
+.figure_bottle .section__texts {
+    display: flex;
+    justify-content: space-between;
+    width: 683px;
+}
+
+.figure_bottle .section__text {
+    width: 320px;
+}
+
+.figure_bottle .figure__img {
+    margin-left: 28px;
+    margin-top: -26px;
+}
+
+.tallinn-vana__cols {
+    display: flex;
+    align-items: baseline;
+    margin-top: -212px;
+}
+
+.figure_ice {
+    width: 130px;
+    margin-right: 85px;
+}
+
+.figure_cola {
+    width: 135px;
+    margin-right: 80px;
+}
+
+.tallinn-vana__cols .figure__caption {
+    margin-top: 20px;
+}
+
+.figure_cola .figure__caption {
+    margin-left: 22px;
+}
+
+.figure_coffee {
+    width: 170px;
+}
+
+.figure_coffee .figure__caption {
+    margin-left: 15px;
+}
+
+/*tallinn kadriorg*/
+.tallinn-kadriorg {
+    margin-bottom: 130px;
+}
+
+.tallinn-kadriorg .section__title {
+    color: #bd6160;
+}
+
+.tallinn-kadriorg .section__text {
+    position: absolute;
+    top: 23px;
+    left: 32px;
+    width: 200px;
+    color: #bd6160;
+}
+
+.tallinn-kadriorg .full-figure__caption {
+    left: 0;
+    bottom: 0;
+    width: 260px;
+    height: 250px;
+    background-image: url("../img/tallinn/sticker3.png");
+    transform: translate(-17%, 42%) rotate(-21deg);
+}
+
+/*tallinn viewpoint*/
+.tallinn-viewpoint {
+    margin-bottom: 90px;
+}
+
+.tallinn-viewpoint .section__title {
+    color: #6f87b6;
+}
+
+.tallinn-viewpoint .full-figure__caption {
+    right: 0;
+    top: 0;
+    width: 253px;
+    height: 253px;
+    padding: 20px;
+    background-image: url(../img/tallinn/sticker4.png);
+    transform: translate(13%, -17%) rotate(13deg);
+}
+
+
+/*location riga*/
+
+.location_riga .location__title {
+    text-align: left;
+}
+
+.location_riga .location__name::before {
+    background-image: url("../img/riga/riga_flag.png");
+}
+
+.location_riga .full-figure__img {
+    margin-top: -175px;
 }
 
 .location_riga .full-figure__caption {
@@ -227,96 +424,14 @@ img {
     transform: translate(-50%, -50%);
     width: 325px;
     height: 231px;
-    background-image:  url("../img/riga/shape_riga.png");
+    background-image:  url("../img/riga/sticker5.png");
 }
 
-.details__title {
-    margin-bottom: 10px;
-    font-family: EBGaramond, Arial, sans-serif;
-    font-size: 72px;
-    color: #e98eb3;
+/*location vilnius*/
+
+.location_vilnius .location__name::before {
+    background-image: url("../img/vilnius/vilnius_flag.png");
 }
 
-.details_tallinn .details__text {
-    width: 255px;
-}
-
-.details__imgs {
-    position: relative;
-    top: -100px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    margin-right: calc(var(--padding) * -1);
-}
-
-.details__figure {
-    position: relative;
-    width: calc(100% / 3);
-}
-
-.details__figure_knocker {
-    align-self: flex-end;
-    bottom: -43px;
-}
-
-.details__figure_door {
-    align-self: center;
-}
-
-.details__figure_lantern {
-    top: -78px;
-    align-self: flex-start;
-    width: 284px;
-    margin-left: auto;
-}
-
-.details__caption {
-    position: absolute;
-    font-size: 16px;
-    line-height: calc(17/16);
-    font-family: Bureausans, Arial, sans-serif;
-    font-weight: 600;
-}
-
-.details__figure_door .details__caption {
-    top: 200px;
-    left: -137px;
-    width: 125px;
-}
-
-.details__figure_lantern .details__caption {
-    bottom: 0;
-    left: 20%;
-    width: 155px;
-}
-
-.details_town-hall {
-    color: white;
-}
-
-.details_town-hall .details__title {
-    color: #7e89d9;
-}
-
-.details_town-hall .full-figure__caption {
-    right: 0;
-    width: 320px;
-    background-image: url("../img/tallinn/sticker1.png");
-    transform: translate(20%, -53%);
-}
-
-.details_town-hall .details__text {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    width: 200px;
-}
-
-.details_town-hall .details__caption {
-    top: 150px;
-    left: 30px;
-    width: 185px;
-}
 
 

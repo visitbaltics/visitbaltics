@@ -13,16 +13,15 @@
 <div class="page">
     <div class="container">
         <header class="intro">
-            <div class="intro__img js-scalable">
-                <img src="./img/intro/main.jpeg" width="" height="" alt="Typical building">
-            </div>
-            <div class="intro__map">
-                <img src="./img/intro/pinkmap.png" width="" height="" alt="Map of Baltics">
-            </div>
-            <div class="intro__logo js-scalable">
-                <img src="./img/intro/letters.png" width="" height="" alt="Visit Baltics">
-            </div>
-            <h1 class="intro__title">
+            <figure class="full-figure">
+                <div class="full-figure__img">
+                    <img src="./img/intro/main.jpg" width="880" height="560" alt="Typical building">
+                </div>
+                <figcaption class="visually-hidden">
+                    Visit Baltics
+                </figcaption>
+            </figure>
+            <h1 class="intro__title title">
                 Here's what you do in the capitals:
             </h1>
         </header>
@@ -36,58 +35,147 @@
                             </h2>
                             <figure class="full-figure">
                                 <div class="full-figure__img">
-                                    <img src="./img/tallinn/tallinn.png" width="" height="" alt="Street">
+                                    <img src="./img/tallinn/tallinn.jpg" width="880" height="560" alt="Street">
                                 </div>
                                 <figcaption class="full-figure__caption">
-                                    It takes 10 mins to reach centre from here
+                                    It takes 10 mins to reach center from here
+                                </figcaption>
+                            </figure>
+                            <figure class="note-figure">
+                                <div class="note-figure__img">
+                                    <img src="./img/tallinn/tallinn_note.png" width="" height="" alt="To-do-list">
+                                </div>
+                                <figcaption class="visually-hidden">
+                                    To do in Tallinn
+                                    <ul>
+                                        <li>Go to park</li>
+                                        <li>View the panorama</li>
+                                        <li>Try Kaler sweets</li>
+                                    </ul>
                                 </figcaption>
                             </figure>
                         </header>
-                        <section class="location__details details details_tallinn">
-                            <h3 class="details__title">
+                        <section class="location__section section tallinn-details">
+                            <h3 class="section__title title">
                                 Look at the details
                             </h3>
-                            <p class="details__text">
+                            <p class="section__text">
                                 Tallinn has lots of&nbsp;antique doors, signs and windows.
                                 Don&rsquo;t hurry and look around to&nbsp;see the real Tallinn.
                             </p>
-                            <div class="details__imgs">
-                                <figure class="details__figure details__figure_knocker">
+                            <div class="tallinn-details__cols">
+                                <figure class="figure figure_knocker">
                                     <img src="./img/tallinn/knocker_signature.png" width="" height="" alt="Knocker">
                                     <figcaption class="visually-hidden">
                                         Knocker on&nbsp;Estonian History museum door
                                     </figcaption>
                                 </figure>
-                                <figure class="details__figure details__figure_door">
-                                    <img src="./img/tallinn/door.png" width="" height="" alt="Knocker">
-                                    <figcaption class="details__caption">
+                                <figure class="figure figure_door">
+                                    <img src="./img/tallinn/door.jpg" width="" height="" alt="Knocker">
+                                    <figcaption class="figure__caption">
                                         Doors in&nbsp;Tallinn are fantastic.<br/> This one is&nbsp;at Suur-Karja 3
                                     </figcaption>
                                 </figure>
-                                <figure class="details__figure details__figure_lantern">
-                                    <img src="./img/tallinn/lantern.png" width="" height="" alt="Lantern">
-                                    <figcaption class="details__caption">
+                                <figure class="figure figure_lantern">
+                                    <img src="./img/tallinn/lantern.jpg" width="" height="" alt="Lantern">
+                                    <figcaption class="figure__caption">
                                         Look above and find antique signboards and lanterns
                                     </figcaption>
                                 </figure>
                             </div>
                         </section>
-                        <section class="location__details details details_town-hall">
-                            <h3 class="details__title">
+                        <section class="location__section section tallinn-town-hall">
+                            <h3 class="section__title title">
                                 Visit the Town Hall Square
                             </h3>
                             <figure class="full-figure">
                                 <div class="full-figure__img">
-                                    <img src="./img/tallinn/townhall.png" width="" height="" alt="Town Hall Square">
+                                    <img src="./img/tallinn/townhall.jpg" width="880" height="560" alt="Town Hall Square">
                                 </div>
                                 <figcaption class="full-figure__caption">
                                     Square looks nice in day light and in the evening, visit it twice
                                 </figcaption>
-                                <p class="details__text">
+                                <figcaption class="section__text">
                                     &mdash;&nbsp;the town centre since the Middle Ages
-                                </p>
-                                <figcaption class="details__caption">
+                                </figcaption>
+                                <figcaption class="section__note">
                                     Traditional restaurant Kaerajaan with a&nbsp;good view and great food
+                                </figcaption>
+                            </figure>
+                        </section>
+                        <section class="location__section section tallinn-vana">
+                            <h3 class="section__title title">
+                                Try Vana Tallinn
+                            </h3>
+
+                            <figure class="figure figure_bottle">
+                                <figcaption class="section__texts">
+                                    <p class="section__text">
+                                        The classical version is a strong liqueur based on rum.
+                                        But you can also try Yoghurt Cream liqueur made from natural yogurt.
+                                    </p>
+                                    <p class="section__text">
+                                        In the competition for the best product of Estonia in 2017,
+                                        it won the first prize among alcoholic beverages.
+                                    </p>
+                                </figcaption>
+                                <img class="figure__img" src="./img/tallinn/bottle.jpg" width="139" height="370" alt="Vana Tallin">
+                            </figure>
+
+                            <div class="tallinn-vana__cols">
+                                <figure class="figure figure_ice">
+                                    <img src="./img/tallinn/ice.jpg" width="106" height="139" alt="Rocks">
+                                    <figcaption class="figure__caption">
+                                        Strong taste of herbs and alchocol
+                                    </figcaption>
+                                </figure>
+
+                                <figure class="figure figure_cola">
+                                    <img src="./img/tallinn/cola.jpg" width="104" height="193" alt="Cola">
+                                    <figcaption class="figure__caption">
+                                        Сola makes the&nbsp;taste softer
+                                    </figcaption>
+                                </figure>
+
+                                <figure class="figure figure_coffee">
+                                    <img src="./img/tallinn/coffee.jpg" width="170" height="135" alt="Coffee">
+                                    <figcaption class="figure__caption">
+                                        Good for black and white coffee
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </section>
+                        <section class="location__section section tallinn-kadriorg">
+                            <h3 class="section__title title">
+                                Relax in Kadriorg Park
+                            </h3>
+                            <figure class="full-figure">
+                                <div class="full-figure__img">
+                                    <img src="./img/tallinn/kadriorg.jpg" width="880" height="560" alt="Kadriorg">
+                                </div>
+                                <figcaption class="full-figure__caption">
+                                    Visit in the early morning to avoid crowds
+                                </figcaption>
+                                <figcaption class="section__text">
+                                    &mdash;&nbsp;the most famous
+                                    park in Estonia
+                                </figcaption>
+                                <figcaption class="visually-hidden">
+                                    1725
+                                </figcaption>
+                            </figure>
+                        </section>
+
+                        <section class="location__section section tallinn-viewpoint">
+                            <h3 class="section__title title">
+                                Look at the town from the top
+                            </h3>
+                            <figure class="full-figure">
+                                <div class="full-figure__img">
+                                    <img src="./img/tallinn/viewpoint.jpg" width="880" height="560" alt="Kadriorg">
+                                </div>
+                                <figcaption class="full-figure__caption">
+                                    Patkuli view point is 100 meters away from Kohtuotsa one
                                 </figcaption>
                             </figure>
                         </section>
@@ -101,15 +189,15 @@
                             </h2>
                             <figure>
                                 <div class="full-figure__img">
-                                    <img src="./img/riga/men.png" width="" height="" alt="Street">
+                                    <img src="./img/riga/mans.jpg" width="880" height="560" alt="Street">
                                 </div>
                                 <figcaption class="full-figure__caption">
                                     Is a must see place with antique architecture and unique buildings
                                 </figcaption>
                             </figure>
                         </header>
-                        <section class="location__details details">
-                            <h3 class="details__title">
+                        <section class="location__section section">
+                            <h3 class="section__title title">
                                 Find all 38 Jugendstil buildings
                             </h3>
                         </section>
@@ -123,15 +211,15 @@
                             </h2>
                             <figure>
                                 <div class="full-figure__img">
-                                    <img src="./img/vilnius/vilnius.png" width="" height="" alt="Street">
+                                    <img src="./img/vilnius/vilnius.png" width="880" height="560" alt="Street">
                                 </div>
                                 <figcaption class="full-figure__caption">
                                     Have a nice day!
                                 </figcaption>
                             </figure>
                         </header>
-                        <section class="location__details details">
-                            <h3 class="details__title">
+                        <section class="location__section section">
+                            <h3 class="section__title title">
                                 Vizit Uzupis
                             </h3>
                         </section>
