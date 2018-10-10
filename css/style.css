@@ -83,6 +83,25 @@ img {
     font-family: EBGaramond, Arial, sans-serif;
     font-size: var(--font-size-l);
     line-height: var(--line-height-l);
+    margin-bottom: 35px;
+}
+
+.link {
+    position: relative;
+}
+
+.link:after {
+    content: ">";
+    position: absolute;
+}
+
+
+.note {
+    position: absolute;
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-xs);
+    font-family: Bureausans, Arial, sans-serif;
+    font-weight: 600;
 }
 
 .page {
@@ -92,7 +111,6 @@ img {
 .container {
     width: var(--full-width);
     margin: 0 auto;
-    box-shadow: 0px 3px 62px 0px rgba(0, 0, 0, 0.32);
 }
 
 .intro {
@@ -170,30 +188,11 @@ img {
     z-index: 1;
 }
 
-.note-figure {
+.list-figure {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translate(16%, 38%);
     z-index: 1;
 }
 
-/*section defaults*/
-
-.section__title {
-    margin-bottom: 25px;
-}
-
-.section__text {
-
-}
-
-.section__note {
-    font-size: var(--font-size-xs);
-    line-height: var(--line-height-xs);
-    font-family: Bureausans, Arial, sans-serif;
-    font-weight: 600;
-}
 
 /*location tallinn*/
 .location_tallinn .location__intro .full-figure__caption {
@@ -204,16 +203,22 @@ img {
     transform: translate(-14%, 32%);
 }
 
+.location_tallinn .list-figure {
+    bottom: 0;
+    right: 0;
+    transform: translate(16%, 38%);
+}
+
 /*tallinn-details*/
 .tallinn-details {
     margin-bottom: 25px;
 }
 
-.tallinn-details .section__title {
+.tallinn-details .title {
     color: #e98eb3;
 }
 
-.tallinn-details .section__text {
+.tallinn-details .text {
     width: 255px;
 }
 
@@ -268,15 +273,14 @@ img {
     margin-bottom: 90px;
 }
 
-.tallinn-town-hall .section__text {
+.tallinn-town-hall .text {
     position: absolute;
     top: 23px;
     left: 32px;
     width: 200px;
 }
 
-.tallinn-town-hall .section__note {
-    position: absolute;
+.tallinn-town-hall .note {
     top: 138px;
     left: 32px;
     width: 185px;
@@ -286,7 +290,7 @@ img {
     color: white;
 }
 
-.tallinn-town-hall .section__title {
+.tallinn-town-hall .title {
     color: #7e89d9;
 }
 
@@ -304,7 +308,7 @@ img {
     margin-bottom: 100px;
 }
 
-.tallinn-vana .section__title {
+.tallinn-vana .title {
     color: #825956;
 }
 
@@ -312,13 +316,13 @@ img {
     display: flex;
 }
 
-.figure_bottle .section__texts {
+.figure_bottle__texts {
     display: flex;
     justify-content: space-between;
     width: 683px;
 }
 
-.figure_bottle .section__text {
+.figure_bottle .text {
     width: 320px;
 }
 
@@ -364,11 +368,11 @@ img {
     margin-bottom: 130px;
 }
 
-.tallinn-kadriorg .section__title {
+.tallinn-kadriorg .title {
     color: #bd6160;
 }
 
-.tallinn-kadriorg .section__text {
+.tallinn-kadriorg .text {
     position: absolute;
     top: 23px;
     left: 32px;
@@ -385,12 +389,39 @@ img {
     transform: translate(-17%, 42%) rotate(-21deg);
 }
 
+.tallinn-kadriorg__cols {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.tallinn-kadriorg__texts {
+    width: 300px;
+    margin-top: 22px;
+}
+
+.tallinn-kadriorg__texts p:first-of-type {
+    margin-bottom: 30px;
+}
+
+.figure_flower {
+    width: 195px;
+    margin-left: calc(var(--padding) * -1);
+    margin-right: 50px;
+    margin-top: -35px;
+}
+
+.figure_palace {
+    width: 359px;
+}
+
 /*tallinn viewpoint*/
 .tallinn-viewpoint {
     margin-bottom: 90px;
 }
 
-.tallinn-viewpoint .section__title {
+.tallinn-viewpoint .title {
     color: #6f87b6;
 }
 
@@ -404,6 +435,19 @@ img {
     transform: translate(13%, -17%) rotate(13deg);
 }
 
+.tallinn-viewpoint .note {
+    color: white;
+}
+
+.note_gates {
+    top: 96px;
+    right: 388px;
+}
+
+.note_sea {
+    top: 39px;
+    left: 104px;
+}
 
 /*location riga*/
 
@@ -411,21 +455,157 @@ img {
     text-align: left;
 }
 
+.location_riga .location__intro {
+    margin-bottom: 80px;
+}
+
 .location_riga .location__name::before {
     background-image: url("../img/riga/riga_flag.png");
 }
 
-.location_riga .full-figure__img {
-    margin-top: -175px;
+.location_riga .location__intro .full-figure {
+    margin-top: -130px;
 }
 
-.location_riga .full-figure__caption {
+.location_riga .location__intro .full-figure__img {
+    position: relative;
+    left: -8px;
+}
+
+.location_riga .location__intro .full-figure__caption {
     left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 0;
+    transform: translate(-50%, 26%);
     width: 325px;
     height: 231px;
     background-image:  url("../img/riga/sticker5.png");
 }
+
+.location_riga .list-figure {
+    top: 0;
+    right: 0;
+    transform: translate(16%, -10%);
+}
+
+/*riga jugendstil*/
+
+.riga-jugendstil {
+    margin-bottom: 90px;
+}
+
+.riga-jugendstil .title,
+.riga-jugendstil .link {
+    color: #4f70b3;
+}
+
+.riga-jugendstil .link {
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.riga-jugendstil__cols {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.riga-jugendstil .text:first-of-type {
+    width: 285px;
+    margin-right: 33px;
+}
+
+.riga-jugendstil .text:last-of-type {
+    width: 295px;
+}
+
+.figure_sphinx {
+    margin-top: -95px;
+    display: flex;
+    align-items: center;
+}
+
+.figure_sphinx .figure__caption {
+    width: 105px;
+    margin-left: 10px;
+    margin-top: 27px;
+}
+
+/*riga blackheads*/
+.riga-blackheads {
+    margin-bottom: 130px;
+}
+
+.riga-blackheads .title {
+    color: #8669d2;
+}
+
+.riga-blackheads .full-figure__caption {
+    left: 0;
+    bottom: 0;
+    width: 235px;
+    height: 204px;
+    padding: 35px;
+    transform: translate(-11%, 58%);
+}
+
+.riga-blackheads .note {
+    color: white;
+}
+
+.note_rats {
+    bottom: 263px;
+    left: 170px;
+    width: 105px;
+}
+
+.note_nazis {
+    top: 55px;
+    right: 190px;
+    width: 185px;
+}
+
+/*dwelling*/
+.riga-dwelling {
+    margin-bottom: 90px;
+    position: relative;
+}
+
+.riga-dwelling .title {
+    position: relative;
+    z-index: 1;
+    color: #f0ce3c;
+}
+
+.riga-dwelling .full-figure {
+    margin-top: -93px;
+}
+
+.riga-dwelling .note {
+    width: 85px;
+}
+
+.note_17 {
+    top: 80px;
+    left: 110px;
+}
+
+.note_16 {
+    top: -50px;
+    left: 249px;
+}
+
+.note_15 {
+    top: 80px;
+    left: 468px;
+}
+
+.figure_maza {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(26%, 42%);
+}
+
 
 /*location vilnius*/
 
