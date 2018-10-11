@@ -29,6 +29,7 @@
 :root {
     --full-width: 1024px;
     --padding: 72px;
+    --offset: 20px;
 
     --font-size-xl: 134px;
     --line-height-xl: 1;
@@ -83,7 +84,7 @@ img {
     font-family: EBGaramond, Arial, sans-serif;
     font-size: var(--font-size-l);
     line-height: var(--line-height-l);
-    margin-bottom: 35px;
+    margin-bottom: 13px;
 }
 
 .link {
@@ -111,6 +112,7 @@ img {
 .container {
     width: var(--full-width);
     margin: 0 auto;
+    padding: 0 var(--padding);
 }
 
 .intro {
@@ -126,7 +128,6 @@ img {
 
 .location {
     position: relative;
-    padding: 0 var(--padding);
 }
 
 .location__intro {
@@ -181,7 +182,7 @@ img {
     display: flex;
     align-items: center;
     padding: 45px;
-    background-image: url("../img/tallinn/sticker1.png");
+    background-image: url("../img/stickers/sticker1.png");
     background-repeat: no-repeat;
     color: white;
     text-align: center;
@@ -276,13 +277,13 @@ img {
 .tallinn-town-hall .text {
     position: absolute;
     top: 23px;
-    left: 32px;
+    left: var(--offset);
     width: 200px;
 }
 
 .tallinn-town-hall .note {
     top: 138px;
-    left: 32px;
+    left: var(--offset);
     width: 185px;
 }
 
@@ -299,7 +300,7 @@ img {
     bottom: 0;
     height: 190px;
     width: 290px;
-    background-image: url("../img/tallinn/sticker2.png");
+    background-image: url("../img/stickers/sticker2.png");
     transform: translate(16%, 20%);
 }
 
@@ -375,7 +376,7 @@ img {
 .tallinn-kadriorg .text {
     position: absolute;
     top: 23px;
-    left: 32px;
+    left: var(--offset);
     width: 200px;
     color: #bd6160;
 }
@@ -385,7 +386,7 @@ img {
     bottom: 0;
     width: 260px;
     height: 250px;
-    background-image: url("../img/tallinn/sticker3.png");
+    background-image: url("../img/stickers/sticker3.png");
     transform: translate(-17%, 42%) rotate(-21deg);
 }
 
@@ -431,7 +432,7 @@ img {
     width: 253px;
     height: 253px;
     padding: 20px;
-    background-image: url(../img/tallinn/sticker4.png);
+    background-image: url(../img/stickers/sticker4.png);
     transform: translate(13%, -17%) rotate(13deg);
 }
 
@@ -478,7 +479,7 @@ img {
     transform: translate(-50%, 26%);
     width: 325px;
     height: 231px;
-    background-image:  url("../img/riga/sticker5.png");
+    background-image:  url("../img/stickers/sticker5.png");
 }
 
 .location_riga .list-figure {
@@ -532,7 +533,7 @@ img {
 
 /*riga blackheads*/
 .riga-blackheads {
-    margin-bottom: 130px;
+    margin-bottom: 237px;
 }
 
 .riga-blackheads .title {
@@ -562,6 +563,64 @@ img {
     top: 55px;
     right: 190px;
     width: 185px;
+}
+
+/*latvian food*/
+.riga-food {
+    margin-bottom: 170px;
+}
+
+.riga-food .title {
+    color: #883a04;
+}
+
+
+.riga-food__cols {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.riga-food__left {
+    width: 350px;
+}
+
+.riga-food .text {
+    margin-bottom: 35px;
+}
+
+.figure_price {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 25px;
+}
+
+.figure_price img {
+    width: 182px;
+}
+
+.figure_price .figure__caption {
+    width: 65px;
+    margin-left: -18px;
+    margin-top: 3px;
+}
+
+.riga-food__right {
+    display: flex;
+    width: 640px;
+    position: relative;
+}
+
+.figure_soup {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.figure_peas {
+    position: absolute;
+    top: -156px;
+    right: -52px;
 }
 
 /*dwelling*/
@@ -606,12 +665,222 @@ img {
     transform: translate(26%, 42%);
 }
 
+/*riga old town*/
+.riga-old-town {
+    margin-bottom: 130px;
+}
+
+.riga-old-town .title {
+    color: #bd7479;
+}
+
+.riga-old-town .full-figure__caption {
+    right: 0;
+    top: 0;
+    width: 260px;
+    height: 250px;
+    padding: 45px;
+    transform: translate(21%, -24%) rotate(-25deg);
+    background-image: url("../img/stickers/sticker3.png");
+}
+
+.riga-old-town .note {
+    color: white;
+}
+
+.note_kramu {
+    bottom: 33px;
+    left: 20px;
+    width: 105px;
+}
 
 /*location vilnius*/
+
+/*riga old town*/
+.riga-old-town {
+    margin-bottom: 130px;
+}
+
+.riga-old-town .title {
+    color: #bd7479;
+}
+
+.riga-old-town .full-figure__caption {
+    right: 0;
+    top: 0;
+    width: 260px;
+    height: 250px;
+    padding: 45px;
+    transform: translate(21%, -24%) rotate(-25deg);
+    background-image: url("../img/stickers/sticker3.png");
+}
+
+.note_kramu {
+    bottom: 33px;
+    left: 20px;
+    width: 105px;
+    color: white;
+}
+
+/*vilnius*/
+.location_vilnius .location__title {
+    color: #be3727;
+}
 
 .location_vilnius .location__name::before {
     background-image: url("../img/vilnius/vilnius_flag.png");
 }
 
+.note_zydu {
+    bottom: 33px;
+    left: 20px;
+    width: 105px;
+    color: white;
+}
 
+.location_vilnius .list-figure {
+    bottom: 0;
+    right: 0;
+    transform: translate(19%, 28%);
+}
+
+/*vilnius bikes*/
+.vilnius-bikes {
+    margin-bottom: 130px;
+}
+
+.vilnius-bikes .title {
+    color: #586d7f;
+}
+
+.vilnius-bikes .full-figure__caption {
+    right: 0;
+    top: 0;
+    width: 260px;
+    height: 250px;
+    padding: 35px;
+    transform: translate(21%, -24%) rotate(-25deg);
+    background-image: url("../img/stickers/sticker3.png");
+}
+
+.note_rotuses {
+    top: 33px;
+    left: 20px;
+    width: 120px;
+    color: white;
+}
+
+/*vilnius pilies*/
+.vilnius-pilies {
+    margin-bottom: 90px;
+}
+
+.vilnius-pilies .title {
+    color: #c76c64;
+}
+
+
+.vilnius-pilies__cols {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.vilnius-pilies__col {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    min-height: 557px;
+    margin-right: 10px;
+}
+
+.vilnius-pilies .text {
+    margin-bottom: 35px;
+}
+
+.figure_teapot1 {
+    margin-top: auto;
+    margin-left: 13px;
+}
+
+.figure_pilies {
+    width: 372px;
+}
+
+.figure_teapot2 {
+    position: relative;
+    top: -43px;
+    left: 22px;
+    width: 203px;
+}
+
+.figure_teapot2 .figure__caption {
+    position: relative;
+    left: 40px;
+    margin-top: 23px;
+    width: 150px;
+}
+
+/*vilnius church*/
+.vilnius-church {
+    margin-bottom: 90px;
+}
+
+.vilnius-church .title {
+    color: #3b5ca5;
+}
+
+.vilnius-church .text {
+    position: absolute;
+    top: 23px;
+    left: var(--offset);
+    width: 360px;
+    color: white;
+}
+
+.vilnius-church .full-figure__caption {
+    left: 0;
+    bottom: 0;
+    height: 190px;
+    width: 290px;
+    padding: 35px;
+    background-image: url(../img/stickers/sticker2.png);
+    transform: translate(-13%, 20%);
+}
+
+.note_church {
+    top: 80px;
+    right: 55px;
+    width: 90px;
+}
+
+/*vilnius balloon*/
+.vilnius-balloon {
+    position: relative;
+    margin-bottom: 130px;
+}
+
+.vilnius-balloon .title {
+    color: #485c90;
+}
+
+.note_ballonya {
+    top: 33px;
+    left: 20px;
+    width: 200px;
+    color: white;
+}
+
+.note_flight-price {
+    top: 46px;
+    left: 452px;
+    width: 70px;
+    color: white;
+}
+
+.figure_balloon {
+    position: absolute;
+    right: -20px;
+    top: 14px;
+}
 
