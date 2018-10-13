@@ -946,7 +946,6 @@ img {
 .figure_balloon {
     position: absolute;
     right: -20px;
-    /*top: 14px;*/
     top: 54px;
     transform: translateY(-40px);
 }
@@ -999,6 +998,10 @@ img {
 
 @-webkit-keyframes baloon {
     0% {
+        transform: translateY(-40px);
+    }
+
+    50% {
         transform: translateY(0);
     }
 
@@ -1009,6 +1012,10 @@ img {
 
 @keyframes baloon {
     0% {
+        transform: translateY(-40px);
+    }
+
+    50% {
         transform: translateY(0);
     }
 
@@ -1020,7 +1027,7 @@ img {
 .baloon {
     -webkit-animation-name: baloon;
     animation-name: baloon;
-    animation-duration: 2s;
+    animation-duration: 4s;
     animation-timing-function: ease-in-out;
     animation-delay: 1s;
     visibility: visible !important;
