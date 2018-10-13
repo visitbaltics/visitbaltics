@@ -29,7 +29,8 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
             }, 1500);
 
             new WOW({
-                offset: offset
+                offset: offset,
+                mobile: false
             }).init();
         });
     } else {

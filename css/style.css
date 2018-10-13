@@ -460,8 +460,9 @@ img {
 }
 
 .note_tower {
-    top: 96px;
-    right: 388px;
+    top: 83px;
+    right: 359px;
+    width: 100px;
 }
 
 .note_sea {
@@ -574,7 +575,7 @@ img {
 
 .note_rats {
     bottom: 263px;
-    left: 170px;
+    left: 230px;
     width: 105px;
 }
 
@@ -946,7 +947,6 @@ img {
 .figure_balloon {
     position: absolute;
     right: -20px;
-    /*top: 14px;*/
     top: 54px;
     transform: translateY(-40px);
 }
@@ -999,6 +999,10 @@ img {
 
 @-webkit-keyframes baloon {
     0% {
+        transform: translateY(-40px);
+    }
+
+    50% {
         transform: translateY(0);
     }
 
@@ -1009,6 +1013,10 @@ img {
 
 @keyframes baloon {
     0% {
+        transform: translateY(-40px);
+    }
+
+    50% {
         transform: translateY(0);
     }
 
@@ -1020,11 +1028,36 @@ img {
 .baloon {
     -webkit-animation-name: baloon;
     animation-name: baloon;
-    animation-duration: 2s;
+    animation-duration: 4s;
     animation-timing-function: ease-in-out;
     animation-delay: 1s;
     visibility: visible !important;
 }
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 130px;
+    margin-bottom: 30px;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    width: 92px;
+}
+
+.socials__item {
+    width: 36px;
+    height: 36px;
+    font-size: 0;
+    background: url("../img/facebook.png") no-repeat;
+}
+
+.socials__item_insta {
+    background-image: url("../img/insta.png")
+}
+
 
 .preload.hidden {
     display: none;
