@@ -34,7 +34,8 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
             }).init();
         });
     } else {
-        loaderElt.classList.add('hidden');
+        document.body.classList.remove('locked');
+        loaderElt.parentElement.removeChild(loaderElt);
     }
 })();
 
