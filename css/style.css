@@ -96,7 +96,6 @@ img {
     position: absolute;
 }
 
-
 .note {
     position: absolute;
     font-size: var(--font-size-xs);
@@ -161,7 +160,6 @@ img {
 }
 
 /*figures default*/
-
 .figure {
     position: relative;
 }
@@ -193,7 +191,6 @@ img {
     position: absolute;
     z-index: 1;
 }
-
 
 /*location tallinn*/
 .location_tallinn .location__intro .full-figure__caption {
@@ -489,7 +486,6 @@ img {
 }
 
 /*riga jugendstil*/
-
 .riga-jugendstil {
     margin-bottom: 90px;
 }
@@ -883,4 +879,3 @@ img {
     right: -20px;
     top: 14px;
 }
-
