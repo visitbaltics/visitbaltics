@@ -129,6 +129,7 @@ img {
     position: relative;
     width: 100%;
     padding: 55px 0 40px 0;
+    padding-top: 0;
 }
 
 .intro__title {
@@ -1035,12 +1036,7 @@ img {
     right: 0;
     bottom: 0;
     left: 0;
-    background-position: center center;
-    background-size: cover;
     z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     color: #ffffff;
 
@@ -1049,8 +1045,63 @@ img {
     animation-direction: alternate;
 }
 
-.loader svg {
-    max-width: 80vw;
+.loader__cover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /*object-fit: cover;*/
+    z-index: 10;
+    transition: all 1s, opacity .5s 1s;
+    opacity: 1;
+}
+
+.loader__cover img {
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+    object-fit: cover;
+}
+
+.loader.hidden .loader__cover {
+    position: absolute;
+    width: var(--full-width);
+    padding: 0 var(--padding);
+    height: auto;
+    margin: 0 auto;
+    opacity: 0;
+}
+
+.loader.hidden .loader__cover img {
+    height: 560px; /* hardcore */
+}
+
+.loader__inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: all .5s;
+}
+
+.loader.hidden .loader__inner {
+    opacity: 0;
+}
+
+.loader__inner svg {
+    max-width: 80%;
+    height: auto;
 }
 
 .spinner {
@@ -1122,3 +1173,6 @@ img {
     }
 }
 
+.locked {
+    overflow: hidden;
+}

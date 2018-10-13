@@ -1,37 +1,61 @@
-(function() {
+(function () {
 
-    var offset = Math.floor(window.innerHeight / 4);
+    const offset = Math.floor(window.innerHeight / 4);
 
-    var preloadElt = document.querySelector('.preload');
+    const preloadElt = document.querySelector('.preload');
+    const loaderElt = document.querySelector('.loader');
 
     if (preloadElt) {
-        const promiseTo
-        preloadImages()
-            .then(() => {
-                    preloadElt.classList.remove('hidden');
+        document.body.classList.add('locked');
 
-                    new WOW({
-                        offset: offset
-                    }).init();
+        const promiseTO = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve()
+            }, 2000);
+        });
+
+        Promise.all([
+            promiseTO,
+            ...preloadImages()
+        ])
+            .then(() => {
+                window.scrollTo(0, 0);
+                preloadElt.classList.remove('hidden');
+                loaderElt.classList.add('hidden');
+
+                setTimeout(() => {
+                    document.body.classList.remove('locked');
+                    loaderElt.parentElement.removeChild(loaderElt);
+                }, 1500);
+
+                new WOW({
+                    offset: offset
+                }).init();
             });
+    } else {
+        loaderElt.classList.add('hidden');
     }
 })();
 
 function preloadImages() {
-    var images = document.querySelectorAll('img');
-    var promises = Array.prototype.map.call(images, function (image) {
-        return new Promise(function (resolve) {
-            image.onload = function () {
-                resolve();
-            };
+    const images = document.querySelectorAll('img');
+    const promises = [...images]
+        .filter(image => !image.classList.contains('loader__cover'))
+        .map((image) => {
+            return new Promise((resolve) => {
+                image.onload = function () {
+                    resolve();
+                };
 
-            image.onerror = function name() {
-                resolve();
-            };
+                image.onerror = function () {
+                    resolve();
+                };
 
-            image.src = image.src;
-        })
-    });
+                image.src = image.src;
+            });
 
-    return Promise.all(promises);
+            return Promise.all(promises);
+        });
+
+    return promises;
 }
