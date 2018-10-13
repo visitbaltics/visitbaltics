@@ -1032,3 +1032,27 @@ img {
     animation-delay: 1s;
     visibility: visible !important;
 }
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 130px;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    width: 92px;
+}
+
+.socials__item {
+    width: 36px;
+    height: 36px;
+    font-size: 0;
+    background: url("../img/facebook.png") no-repeat;
+}
+
+.socials__item_insta {
+    background-image: url("../img/insta.png")
+}
+
