@@ -87,13 +87,24 @@ img {
     margin-bottom: 13px;
 }
 
+.title_before-full {
+    margin-bottom: 4px;
+}
+
 .link {
     position: relative;
+    text-decoration: none;
+    border-bottom: 1px solid;
 }
 
 .link:after {
-    content: ">";
+    content: "";
     position: absolute;
+    background: url(../img/link.svg) no-repeat;
+    width: 7px;
+    height: 15px;
+    bottom: 5px;
+    right: -9px;
 }
 
 .note {
@@ -279,7 +290,7 @@ img {
 
 .tallinn-town-hall .text {
     position: absolute;
-    top: 23px;
+    top: 10px;
     left: var(--offset);
     width: 200px;
 }
@@ -378,7 +389,7 @@ img {
 
 .tallinn-kadriorg .text {
     position: absolute;
-    top: 23px;
+    top: 10px;
     left: var(--offset);
     width: 200px;
     color: #bd6160;
@@ -499,6 +510,7 @@ img {
 .riga-jugendstil .title,
 .riga-jugendstil .link {
     color: #4f70b3;
+    border-bottom-color: rgba(79, 112, 179, 0.4);
 }
 
 .riga-jugendstil .link {
@@ -880,7 +892,7 @@ img {
 
 .vilnius-church .text {
     position: absolute;
-    top: 23px;
+    top: 10px;
     left: var(--offset);
     width: 360px;
     color: white;
