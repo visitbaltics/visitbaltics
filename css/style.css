@@ -1032,11 +1032,3 @@ img {
     animation-delay: 1s;
     visibility: visible !important;
 }
-
-@media only screen and (max-width: 600px) {
-    .fadeIn {
-        -webkit-animation-name: none !important;
-        animation-name: none !important;
-        visibility: visible !important;
-    }
-}
