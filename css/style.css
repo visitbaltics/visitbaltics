@@ -27,8 +27,8 @@
 }
 
 :root {
-    --full-width: 1024px;
-    --padding: 72px;
+    --full-width: 1000px;
+    --padding: 60px;
     --offset: 20px;
 
     --font-size-xl: 134px;
@@ -123,6 +123,12 @@ img {
 .intro__title {
     margin-top: 45px;
     text-align: center;
+}
+
+.note_intro {
+    right: 247px;
+    top: 406px;
+    width: 90px;
 }
 
 .location {
@@ -382,9 +388,9 @@ img {
     left: 0;
     bottom: 0;
     width: 260px;
-    height: 250px;
+    height: 262px;
     background-image: url("../img/stickers/sticker3.png");
-    transform: translate(-17%, 42%) rotate(-21deg);
+    transform: translate(-8%, 36%) rotate(-21deg);
 }
 
 .tallinn-kadriorg__cols {
@@ -570,7 +576,6 @@ img {
     color: #883a04;
 }
 
-
 .riga-food__cols {
     display: flex;
     justify-content: space-between;
@@ -661,6 +666,45 @@ img {
     transform: translate(26%, 42%);
 }
 
+/*riga balsam*/
+.riga-balsam {
+    margin-bottom: 90px;
+}
+
+.riga-balsam .title {
+    color: #59377b;
+}
+
+.riga-balsam__cols {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.riga-balsam__left {
+    width: 139px;
+    margin-left: 28px;
+    margin-right: 20px;
+}
+
+.riga-balsam__center {
+    display: flex;
+    flex-direction: column;
+    width: 255px;
+    min-height: 377px;
+    margin-right: 70px;
+}
+
+.riga-balsam .text {
+    margin-bottom: auto;
+}
+
+.figure_candies .figure__caption {
+    width: 134px;
+    margin-top: 25px;
+    margin-left: 34px;
+}
+
 /*riga old town*/
 .riga-old-town {
     margin-bottom: 130px;
@@ -674,9 +718,9 @@ img {
     right: 0;
     top: 0;
     width: 260px;
-    height: 250px;
+    height: 262px;
     padding: 45px;
-    transform: translate(21%, -24%) rotate(-25deg);
+    transform: translate(8%, -26%) rotate(-25deg);
     background-image: url("../img/stickers/sticker3.png");
 }
 
@@ -691,34 +735,6 @@ img {
 }
 
 /*location vilnius*/
-
-/*riga old town*/
-.riga-old-town {
-    margin-bottom: 130px;
-}
-
-.riga-old-town .title {
-    color: #bd7479;
-}
-
-.riga-old-town .full-figure__caption {
-    right: 0;
-    top: 0;
-    width: 260px;
-    height: 250px;
-    padding: 45px;
-    transform: translate(21%, -24%) rotate(-25deg);
-    background-image: url("../img/stickers/sticker3.png");
-}
-
-.note_kramu {
-    bottom: 33px;
-    left: 20px;
-    width: 105px;
-    color: white;
-}
-
-/*vilnius*/
 .location_vilnius .location__title {
     color: #be3727;
 }
@@ -737,7 +753,43 @@ img {
 .location_vilnius .list-figure {
     bottom: 0;
     right: 0;
-    transform: translate(19%, 28%);
+    transform: translate(15%, 35%);
+}
+
+/*vilnius uzupis*/
+.vilnius-uzupis {
+    position: relative;
+    margin-bottom: 90px;
+}
+
+.vilnius-uzupis .title {
+    position: relative;
+    color: #78bdda;
+    z-index: 1;
+}
+
+.figure_emblem {
+    position: absolute;
+    left: 6px;
+    top: 93px;
+    z-index: 1;
+}
+
+.figure_angel {
+    position: absolute;
+    right: calc(var(--padding) * -1);
+    top: 15px;
+}
+
+.vilnius-uzupis__text {
+    position: relative;
+    margin: 314px auto 0;
+    z-index: 1;
+}
+
+.vilnius-uzupis .text {
+    margin-left: 353px;
+    width: 330px;
 }
 
 /*vilnius bikes*/
@@ -753,9 +805,9 @@ img {
     right: 0;
     top: 0;
     width: 260px;
-    height: 250px;
+    height: 262px;
     padding: 35px;
-    transform: translate(21%, -24%) rotate(-25deg);
+    transform: translate(8%, -26%) rotate(-25deg);
     background-image: url("../img/stickers/sticker3.png");
 }
 
