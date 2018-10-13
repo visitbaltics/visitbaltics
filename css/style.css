@@ -117,7 +117,7 @@ img {
 .intro {
     position: relative;
     width: 100%;
-    padding: 55px var(--padding) 40px var(--padding);
+    padding: 55px 0 40px 0;
 }
 
 .intro__title {
@@ -437,7 +437,7 @@ img {
     color: white;
 }
 
-.note_gates {
+.note_tower {
     top: 96px;
     right: 388px;
 }
