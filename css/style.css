@@ -455,8 +455,9 @@ img {
 }
 
 .note_tower {
-    top: 96px;
-    right: 388px;
+    top: 83px;
+    right: 359px;
+    width: 100px;
 }
 
 .note_sea {
