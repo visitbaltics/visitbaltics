@@ -204,6 +204,10 @@ img {
     z-index: 1;
 }
 
+.full-figure__caption + .full-figure__caption {
+    left: 200px !important;
+}
+
 .list-figure {
     position: absolute;
     z-index: 1;
@@ -942,5 +946,82 @@ img {
 .figure_balloon {
     position: absolute;
     right: -20px;
-    top: 14px;
+    /*top: 14px;*/
+    top: 54px;
+    transform: translateY(-40px);
+}
+
+.animated {
+    -webkit-animation-duration: .8s;
+    animation-duration: .8s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes baloon {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-40px);
+    }
+}
+
+@keyframes baloon {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-40px);
+    }
+}
+
+.baloon {
+    -webkit-animation-name: baloon;
+    animation-name: baloon;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    visibility: visible !important;
 }
