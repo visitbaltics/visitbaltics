@@ -1,61 +1,61 @@
+'use strict';
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 (function () {
 
-    const offset = Math.floor(window.innerHeight / 4);
+    var offset = Math.floor(window.innerHeight / 4);
 
-    const preloadElt = document.querySelector('.preload');
-    const loaderElt = document.querySelector('.loader');
+    var preloadElt = document.querySelector('.preload');
+    var loaderElt = document.querySelector('.loader');
 
     if (preloadElt) {
         document.body.classList.add('locked');
 
-        const promiseTO = new Promise((resolve) => {
-            setTimeout(() => {
-                resolve()
+        var promiseTO = new Promise(function (resolve) {
+            setTimeout(function () {
+                resolve();
             }, 2000);
         });
 
-        Promise.all([
-            promiseTO,
-            ...preloadImages()
-        ])
-            .then(() => {
-                window.scrollTo(0, 0);
-                preloadElt.classList.remove('hidden');
-                loaderElt.classList.add('hidden');
+        Promise.all([promiseTO].concat(_toConsumableArray(preloadImages()))).then(function () {
+            window.scrollTo(0, 0);
+            preloadElt.classList.remove('hidden');
+            loaderElt.classList.add('hidden');
 
-                setTimeout(() => {
-                    document.body.classList.remove('locked');
-                    loaderElt.parentElement.removeChild(loaderElt);
-                }, 1500);
+            setTimeout(function () {
+                document.body.classList.remove('locked');
+                loaderElt.parentElement.removeChild(loaderElt);
+            }, 1500);
 
-                new WOW({
-                    offset: offset
-                }).init();
-            });
+            new WOW({
+                offset: offset
+            }).init();
+        });
     } else {
         loaderElt.classList.add('hidden');
     }
 })();
 
 function preloadImages() {
-    const images = document.querySelectorAll('img');
-    const promises = [...images]
-        .filter(image => !image.classList.contains('loader__cover'))
-        .map((image) => {
-            return new Promise((resolve) => {
-                image.onload = function () {
-                    resolve();
-                };
+    var images = document.querySelectorAll('img');
+    var promises = [].concat(_toConsumableArray(images)).filter(function (image) {
+        return !image.classList.contains('loader__cover');
+    }).map(function (image) {
+        return new Promise(function (resolve) {
+            image.onload = function () {
+                resolve();
+            };
 
-                image.onerror = function () {
-                    resolve();
-                };
+            image.onerror = function () {
+                resolve();
+            };
 
-                image.src = image.src;
-            });
-
-            return Promise.all(promises);
+            image.src = image.src;
         });
+
+        return Promise.all(promises);
+    });
 
     return promises;
 }
