@@ -502,15 +502,14 @@ img {
 
 .location_riga .location__intro .full-figure__img {
     position: relative;
-    left: -8px;
 }
 
 .location_riga .location__intro .full-figure__caption {
     left: 50%;
     bottom: 0;
-    transform: translate(-50%, 26%);
+    transform: translate(-50%, 20%);
     width: 320px;
-    height: 261px;
+    height: 231px;
     background-image:  url("../img/stickers/sticker5.png");
 }
 
@@ -667,7 +666,7 @@ img {
 }
 
 .riga-dwelling .full-figure {
-    margin-top: -93px;
+    margin-top: -120px;
 }
 
 .riga-dwelling .note {
@@ -675,8 +674,8 @@ img {
 }
 
 .note_17 {
-    top: 80px;
-    left: 110px;
+    top: 150px;
+    left: 40px;
 }
 
 .note_16 {
@@ -685,7 +684,7 @@ img {
 }
 
 .note_15 {
-    top: 80px;
+    top: 150px;
     left: 468px;
 }
 
@@ -693,7 +692,7 @@ img {
     position: absolute;
     right: 0;
     top: 0;
-    transform: translate(26%, 42%);
+    transform: translate(26%, 30%);
 }
 
 /*riga balsam*/
@@ -813,7 +812,7 @@ img {
 
 .vilnius-uzupis__text {
     position: relative;
-    margin: 314px auto 0;
+    margin: 364px auto 0;
     z-index: 1;
 }
 
