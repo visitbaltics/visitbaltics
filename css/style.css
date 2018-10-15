@@ -1089,10 +1089,11 @@ a:hover {
 
 .socials__item_insta {
     background-image: url("../img/insta.png")
-}
+}g
 
 
 .copyright {
     position: absolute;
-    margin-left: -810px;
+    margin-left: -817px;
+    margin-top: -50px;
 }
