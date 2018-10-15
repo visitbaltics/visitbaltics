@@ -103,8 +103,8 @@ img {
     background: url(../img/link.svg) no-repeat;
     width: 7px;
     height: 15px;
-    bottom: 5px;
-    right: -9px;
+    bottom: 6px;
+    right: -11px;
 }
 
 .note {
@@ -129,7 +129,10 @@ img {
     position: relative;
     width: 100%;
     padding: 55px 0 40px 0;
-    padding-top: 0;
+}
+
+.intro .full-figure {
+    background-color: #edcfbe;
 }
 
 .intro__title {
@@ -191,6 +194,7 @@ img {
 
 .full-figure {
     position: relative;
+    background-color: #bfc8d5;
 }
 
 .full-figure__caption {
@@ -227,6 +231,10 @@ img {
     bottom: 0;
     right: 0;
     transform: translate(16%, 38%);
+}
+
+.location_tallinn .full-figure {
+    background-color: #afdaf5;
 }
 
 /*tallinn-details*/
@@ -312,6 +320,10 @@ img {
 
 .tallinn-town-hall .title {
     color: #7e89d9;
+}
+
+.tallinn-town-hall .full-figure {
+    background-color: #82b0fa;
 }
 
 .tallinn-town-hall .full-figure__caption {
@@ -406,7 +418,7 @@ img {
     width: 260px;
     height: 262px;
     background-image: url("../img/stickers/sticker3.png");
-    transform: translate(-8%, 36%) rotate(-21deg);
+    transform: translate(-8%, 36%) rotate(-18deg);
 }
 
 .tallinn-kadriorg__cols {
@@ -497,8 +509,8 @@ img {
     left: 50%;
     bottom: 0;
     transform: translate(-50%, 26%);
-    width: 325px;
-    height: 231px;
+    width: 320px;
+    height: 261px;
     background-image:  url("../img/stickers/sticker5.png");
 }
 
@@ -580,8 +592,8 @@ img {
 }
 
 .note_nazis {
-    top: 35px;
-    right: 190px;
+    top: 60px;
+    right: 220px;
     width: 185px;
 }
 
@@ -1056,152 +1068,4 @@ img {
 
 .socials__item_insta {
     background-image: url("../img/insta.png")
-}
-
-
-.preload.hidden {
-    display: none;
-}
-
-.loader {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-
-    color: #ffffff;
-
-    animation: color .5s infinite;
-    animation-timing-function: ease-in-out;
-    animation-direction: alternate;
-}
-
-.loader__cover {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    /*object-fit: cover;*/
-    z-index: 10;
-    transition: all 1s, opacity .5s 1s;
-    opacity: 1;
-}
-
-.loader__cover img {
-    width: 100%;
-    height: 100%;
-    transition: all 1s;
-    object-fit: cover;
-}
-
-.loader.hidden .loader__cover {
-    position: absolute;
-    width: var(--full-width);
-    padding: 0 var(--padding);
-    height: auto;
-    margin: 0 auto;
-    opacity: 0;
-}
-
-.loader.hidden .loader__cover img {
-    height: 560px; /* hardcore */
-}
-
-.loader__inner {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-    transition: all .5s;
-}
-
-.loader.hidden .loader__inner {
-    opacity: 0;
-}
-
-.loader__inner svg {
-    max-width: 80%;
-    height: auto;
-}
-
-.spinner {
-    color: #ffffff;
-    font-size: 20px;
-    margin: 100px auto;
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
-    position: relative;
-    -webkit-animation: load4 1.3s infinite linear;
-    animation: load4 1.3s infinite linear;
-    -webkit-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    transform: translateZ(0);
-}
-@-webkit-keyframes load4 {
-    0%,
-    100% {
-        box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
-    }
-    12.5% {
-        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
-    }
-    25% {
-        box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
-    }
-    37.5% {
-        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
-    }
-    50% {
-        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
-    }
-    62.5% {
-        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
-    }
-    75% {
-        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
-    }
-    87.5% {
-        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
-    }
-}
-@keyframes load4 {
-    0%,
-    100% {
-        box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
-    }
-    12.5% {
-        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
-    }
-    25% {
-        box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
-    }
-    37.5% {
-        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
-    }
-    50% {
-        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
-    }
-    62.5% {
-        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
-    }
-    75% {
-        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
-    }
-    87.5% {
-        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
-    }
 }
