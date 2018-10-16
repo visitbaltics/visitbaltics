@@ -91,13 +91,6 @@ a:hover {
     margin-bottom: 13px;
 }
 
-.title_form {
-    font-family: Bureausans, Arial, sans-serif;
-    font-size: var(--font-size-l);
-    line-height: var(--line-height-l);
-    margin-bottom: 13px;
-}
-
 .title_before-full {
     margin-bottom: 4px;
 }
@@ -106,10 +99,6 @@ a:hover {
     position: relative;
     text-decoration: none;
     border-bottom: 1px solid;
-}
-
-a:hover {
-    color: red;
 }
 
 .link:after {
@@ -122,7 +111,11 @@ a:hover {
     right: -11px;
 }
 
-.note {
+.link:hover {
+    color: #b74b4b;
+}
+
+.full-figure__note {
     position: absolute;
     font-size: var(--font-size-xs);
     line-height: var(--line-height-xs);
@@ -155,7 +148,7 @@ a:hover {
     text-align: center;
 }
 
-.note_intro {
+.full-figure__note_intro {
     right: 247px;
     top: 406px;
     width: 90px;
@@ -212,7 +205,7 @@ a:hover {
     background-color: #bfc8d5;
 }
 
-.full-figure__caption {
+.full-figure__sticker {
     position: absolute;
     display: flex;
     align-items: center;
@@ -224,17 +217,13 @@ a:hover {
     z-index: 1;
 }
 
-.full-figure__caption + .full-figure__caption {
-    left: 200px !important;
-}
-
 .list-figure {
     position: absolute;
     z-index: 1;
 }
 
 /*location tallinn*/
-.location_tallinn .location__intro .full-figure__caption {
+.location_tallinn .location__intro .full-figure__sticker {
     left: 0;
     bottom: 0;
     width: 235px;
@@ -316,14 +305,7 @@ a:hover {
     margin-bottom: 90px;
 }
 
-.tallinn-town-hall .text {
-    position: absolute;
-    top: 10px;
-    left: var(--offset);
-    width: 200px;
-}
-
-.tallinn-town-hall .note {
+.tallinn-town-hall .full-figure__note {
     top: 138px;
     left: var(--offset);
     width: 185px;
@@ -342,6 +324,13 @@ a:hover {
 }
 
 .tallinn-town-hall .full-figure__caption {
+    position: absolute;
+    top: 10px;
+    left: var(--offset);
+    width: 200px;
+}
+
+.tallinn-town-hall .full-figure__sticker {
     right: 0;
     bottom: 0;
     height: 190px;
@@ -419,7 +408,7 @@ a:hover {
     color: #bd6160;
 }
 
-.tallinn-kadriorg .text {
+.tallinn-kadriorg .full-figure__caption {
     position: absolute;
     top: 10px;
     left: var(--offset);
@@ -427,7 +416,7 @@ a:hover {
     color: #bd6160;
 }
 
-.tallinn-kadriorg .full-figure__caption {
+.tallinn-kadriorg .full-figure__sticker {
     left: 0;
     bottom: 0;
     width: 260px;
@@ -459,7 +448,7 @@ a:hover {
     margin-top: -35px;
 }
 
-.figure_flower_signature {
+.figure_flower .figure__caption {
     width: 100px;
     margin-top: -30px;
     margin-left: 50px;
@@ -478,7 +467,7 @@ a:hover {
     color: #6f87b6;
 }
 
-.tallinn-viewpoint .full-figure__caption {
+.tallinn-viewpoint .full-figure__sticker {
     right: 0;
     top: 0;
     width: 253px;
@@ -488,17 +477,17 @@ a:hover {
     transform: translate(13%, -17%) rotate(13deg);
 }
 
-.tallinn-viewpoint .note {
+.tallinn-viewpoint .full-figure__note {
     color: white;
 }
 
-.note_tower {
+.full-figure__note_tower {
     top: 58px;
     right: 359px;
     width: 100px;
 }
 
-.note_sea {
+.full-figure__note_sea {
     top: 39px;
     left: 104px;
 }
@@ -526,7 +515,7 @@ a:hover {
     position: relative;
 }
 
-.location_riga .location__intro .full-figure__caption {
+.location_riga .location__intro .full-figure__sticker {
     left: 50%;
     bottom: 0;
     transform: translate(-50%, 20%);
@@ -550,6 +539,10 @@ a:hover {
 .riga-jugendstil .link {
     color: #4f70b3;
     border-bottom-color: rgba(79, 112, 179, 0.4);
+}
+
+.riga-jugendstil .link:hover {
+    color: #b74b4b;
 }
 
 .riga-jugendstil .link {
@@ -593,7 +586,7 @@ a:hover {
     color: #8669d2;
 }
 
-.riga-blackheads .full-figure__caption {
+.riga-blackheads .full-figure__sticker {
     left: 0;
     bottom: 0;
     width: 235px;
@@ -602,17 +595,17 @@ a:hover {
     transform: translate(-11%, 58%);
 }
 
-.riga-blackheads .note {
+.riga-blackheads .full-figure__note {
     color: white;
 }
 
-.note_rats {
+.full-figure__note_rats {
     bottom: 263px;
     left: 230px;
     width: 105px;
 }
 
-.note_nazis {
+.full-figure__note_nazis {
     top: 60px;
     right: 220px;
     width: 185px;
@@ -691,21 +684,21 @@ a:hover {
     margin-top: -100px;
 }
 
-.riga-dwelling .note {
+.riga-dwelling .full-figure__note {
     width: 85px;
 }
 
-.note_17 {
+.full-figure__note_17 {
     top: 120px;
     left: 40px;
 }
 
-.note_16 {
+.full-figure__note_16 {
     top: -50px;
     left: 249px;
 }
 
-.note_15 {
+.full-figure__note_15 {
     top: 120px;
     left: 468px;
 }
@@ -765,7 +758,7 @@ a:hover {
     color: #bd7479;
 }
 
-.riga-old-town .full-figure__caption {
+.riga-old-town .full-figure__sticker {
     right: 0;
     top: 0;
     width: 260px;
@@ -775,11 +768,11 @@ a:hover {
     background-image: url("../img/stickers/sticker3.png");
 }
 
-.riga-old-town .note {
+.riga-old-town .full-figure__note {
     color: white;
 }
 
-.note_kramu {
+.full-figure__note_kramu {
     bottom: 33px;
     left: 20px;
     width: 105px;
@@ -794,7 +787,7 @@ a:hover {
     background-image: url("../img/vilnius/vilnius_flag.png");
 }
 
-.note_zydu {
+.full-figure__note_zydu {
     bottom: 33px;
     left: 20px;
     width: 105px;
@@ -852,7 +845,7 @@ a:hover {
     color: #586d7f;
 }
 
-.vilnius-bikes .full-figure__caption {
+.vilnius-bikes .full-figure__sticker {
     right: 0;
     top: 0;
     width: 260px;
@@ -862,7 +855,7 @@ a:hover {
     background-image: url("../img/stickers/sticker3.png");
 }
 
-.note_rotuses {
+.full-figure__note_rotuses {
     top: 33px;
     left: 20px;
     width: 120px;
@@ -929,7 +922,7 @@ a:hover {
     color: #3b5ca5;
 }
 
-.vilnius-church .text {
+.vilnius-church .full-figure__caption {
     position: absolute;
     top: 10px;
     left: var(--offset);
@@ -937,7 +930,7 @@ a:hover {
     color: white;
 }
 
-.vilnius-church .full-figure__caption {
+.vilnius-church .full-figure__sticker {
     left: 0;
     bottom: 0;
     height: 190px;
@@ -947,7 +940,7 @@ a:hover {
     transform: translate(-13%, 20%);
 }
 
-.note_church {
+.full-figure__note_church {
     top: 80px;
     right: 55px;
     width: 90px;
@@ -963,14 +956,14 @@ a:hover {
     color: #485c90;
 }
 
-.note_ballonya {
+.full-figure__note_ballonya {
     top: 33px;
     left: 20px;
     width: 200px;
     color: white;
 }
 
-.note_flight-price {
+.full-figure__note_flight-price {
     top: 46px;
     left: 452px;
     width: 70px;
@@ -1067,33 +1060,11 @@ a:hover {
     visibility: visible !important;
 }
 
+.booking__title {
+    text-align: center;
+}
+
 .footer {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 130px;
+    margin-top: 80px;
     margin-bottom: 30px;
-}
-
-.socials {
-    display: flex;
-    justify-content: space-between;
-    width: 92px;
-}
-
-.socials__item {
-    width: 36px;
-    height: 36px;
-    font-size: 0;
-    background: url("../img/facebook.png") no-repeat;
-}
-
-.socials__item_insta {
-    background-image: url("../img/insta.png")
-}g
-
-
-.copyright {
-    position: absolute;
-    margin-left: -817px;
-    margin-top: -50px;
 }
