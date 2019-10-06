@@ -1,0 +1,42 @@
+.title-block {
+  margin-top: 75px;
+  margin-bottom: 90px;
+}
+
+@media (max-width: 767px) {
+  .title-block {
+    margin-top: 35px;
+    margin-bottom: 50px;
+  }
+}
+
+.title-block__title {
+  font-size: 42px;
+  line-height: 56px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .title-block__title {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+}
+
+.title-block__text {
+  font-size: 32px;
+  line-height: 1.2;
+  color: #1f1f1f;
+  padding-right: 10%;
+}
+
+@media (max-width: 767px) {
+  .title-block__text {
+    padding-right: 0;
+    font-size: 24px;
+    text-align: justify;
+  }
+}

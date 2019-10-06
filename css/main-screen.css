@@ -1,0 +1,48 @@
+.main-bg {
+  background-size: cover;
+  background-position: center;
+
+  background-image: url("../img/main-bg.jpeg");
+}
+
+.main-screen {
+  min-height: 100vh;
+  position: relative;
+  background-color: #e5aec3;
+}
+
+.main-screen__logo {
+  max-width: 500px;
+  position: absolute;
+  top: 18%;
+  left: 11%;
+}
+
+@media (max-width: 767px) {
+  .main-screen__logo {
+    max-width: 60vw;
+    top: 15%;
+  }
+}
+
+.main-screen__title {
+  /*width: 100px;*/
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  position: absolute;
+  top: 45%;
+  left: 20%;
+
+  /*TODO: показать кате*/
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 767px) {
+  .main-screen__title {
+    top: 35%;
+    left: 13%;
+  }
+}
+

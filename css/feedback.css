@@ -1,0 +1,98 @@
+.feedback {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+
+@media (max-width: 767px) {
+  .feedback {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+}
+
+.feedback > div {
+  width: 50%;
+}
+
+@media (max-width: 767px) {
+  .feedback > div {
+    width: 100%;
+  }
+}
+
+.feedback__text {
+  padding-right: 70px;
+}
+
+@media (max-width: 767px) {
+  .feedback__text {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.feedback__text p {
+  color: #000000;
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 25px;
+}
+
+.feedback__text p:last-child {
+  margin-bottom: 0;
+}
+
+.feedback__text p a {
+  text-decoration: none;
+  color: #970b0b;
+}
+
+.feedback fieldset {
+  margin-bottom: 20px;
+
+}
+
+.feedback fieldset:last-child {
+  margin-bottom: 0;
+}
+
+.feedback__input {
+  position: relative;
+}
+
+.feedback__input input {
+  width: 100%;
+  height: 50px;
+  padding: 17px 120px 17px 20px;
+  font-size: 22px;
+  color: #000000;
+  outline: none;
+  box-shadow: inset 0 3px 4px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e1e0e0;
+}
+
+.feedback__input input::placeholder {
+  color: #a0a0a0;
+}
+
+.feedback__input button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  position: absolute;
+  color: #ffffff;
+  background-color: #970b0b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  right: 0;
+  top: 0;
+}
